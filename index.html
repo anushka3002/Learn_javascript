@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oooh+Baby&family=Pushster&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body{
+            width:100%;
+            height:400px;
+            font-family: 'Lobster', cursive;
+            font-family: 'Oooh Baby', cursive;
+            font-family: 'Pushster', cursive;
+            font-family: 'Satisfy', cursive;
+            font-size: 17px;
+            background-image:url("https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/bbbf2a17-987c-4fe6-b190-ac8fe0e235e9") ;
+        }
+        #bigbox{
+            display: flex;
+        }
+        #container{
+            width:12%;
+            height:400px;
+            margin-left: 15%;
+            margin-top: 100px;
+        }
+        button{
+            margin-bottom: 20px;
+            width:100%;
+            height:35px;
+            background-color: rgb(37, 36, 36);
+            color:white;
+            border-radius: 6px;
+        }
+        #board{
+            width:50%;
+            height:360px;
+            margin-left: 5%;
+            margin-top: 100px;
+            border-radius: 9px;
+            border:1px solid rgb(17, 16, 16);
+            background-image: url("https://swall.teahub.io/photos/small/302-3023885_professional-blue-website-background.png");
+        }
+        h2{
+            margin-top: 2px;
+            text-decoration: underline;
+        }
+        #heading{
+            text-align: center;
+        }
+        h3{
+            text-decoration: underline;
+        }
+        button:hover {
+        outline: none;
+        border-color:#d3ad4e ;
+        box-shadow: 0 0 15px #fa3d66;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="bigbox">
+    <div id="container">
+    <button id="first">Objects</button>
+    <button id="second">Arrays</button>
+    <button id="third">Functions</button>
+    <button id="fourth">Strings</button>
+    <button id="fifth">Numbers</button>
+    <button id="sixth">null</button>
+    <button id="seventh">undefined</button>
+    </div>
+    <div id="board">
+        <div id="heading">
+            <h2>Let's learn javascript</h2>
+        </div>
+        <table>
+            <tbody></tbody>
+                <tr id="oney">
+                    <th></th>
+                </tr>
+                <tr id="twoy">
+                    <th></th>
+                </tr>
+                <tr id="threey">
+                    <th></th>
+                </tr>
+                <tr id="foury">
+                    <th></th>
+                </tr>
+                <tr id="fivey">
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let learn=(content)=>
+    {
+    let data= document.querySelector("table");
+    data.textContent=content;
+    }
+    let first=document.querySelector("#first");
+    first.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. Javascript object is a standalone entity that holds multiple values in terms of properties and methods."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. Object property stores a literal value and method represents function.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. An object can be created using object literal or object constructor syntax."
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. Object properties and methods can be accessed using dot notation or [] bracket.";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5. An object is passed by reference from one function to another.";
+        learn.append(one,two,three,four,five);
+    })
+    let second=document.querySelector("#second");
+    second.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. An element type. All elements of an array are of same type."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. The length of an array is the number of elements in the array.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. The size of the array is the size of all the elements in the array."
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. A name for the array object";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5. It is mutable";
+        learn.append(one,two,three,four,five);
+    })
+        
+    let third=document.querySelector("#third");
+    third.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. JavaScript function allows you to define a block of code, give it a name and then execute it as many times as you want."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. A function can be defined using function keyword and can be executed using() operator.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. A function can be defined using function keyword and can be executed using () operator."
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. JavaScript is a loosely-typed language. A function parameter can hold value of any datatype.";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5. You can specify less or more arguments while calling function.";
+        learn.append(one,two,three,four,five);
+    })
+    let fourth=document.querySelector("#fourth");
+    fourth.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. A string is a collection of alphanumeric characters."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. Double quote or single quote in string behave identically.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. It is immutable."
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. It is a primitive data type.";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5. It is used to represent text rather than numbers.";
+        learn.append(one,two,three,four,five);
+    })
+    let fifth=document.querySelector("#fifth");
+    fifth.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. Numbers are for numbers. One cannot put a letter on here."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. They are integer or decimal number created in the language.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. They are used for money, age, etc"
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. We can perform calculations on numbers.";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5.Number can represent fractional values but there are some limits to which it can store.";
+        learn.append(one,two,three,four,five);
+    })
+    let sixth=document.querySelector("#sixth");
+    sixth.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. It is the international absence of the value.."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. It is one of the primitive values of JavaScript.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. The type of null is object."
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. When we define a variable to undefined then we are trying to convey that the variable does  not exist.";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5. With null you use it generally to erase the contents of a variable.";
+        learn.append(one,two,three,four,five);
+    })
+    let seventh=document.querySelector("#seventh");
+    seventh.addEventListener("click",function(){
+        var one=document.querySelector("#oney");
+        one.textContent="1. It means the variable has been declared but not defined yet."
+        var two =document.querySelector("#twoy");
+        two.textContent="2. It is the global object.";
+        var three=document.querySelector("#threey")
+        three.textContent="3. Type of undefined is undefined."
+        var four=document.querySelector("#foury");
+        four.textContent=" 4. When we define a variable to null then we are trying to convey that the variable is empty.";
+        var five=document.querySelector("#fivey");
+        five.textContent="  5. With undefined it generally comes with input when there hasn't been set a value yet.";
+        learn.append(one,two,three,four,five);
+    })
+
+    
+</script>
